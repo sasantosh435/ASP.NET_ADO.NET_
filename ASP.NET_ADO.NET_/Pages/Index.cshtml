@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ASP.NET_ADO.NET_.Customers>
+ 
+@{ 
+    ViewData["Title"] = "Home Page";
+}
+<div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            
+        
+  
+    <th>
+        @Html.DisplayName("No")
+    </th>
+    <th>
+        @Html.DisplayName("Customer Name")
+    </th>
+    <th>
+        @Html.DisplayName("Mobile Number")
+    </th>
+    <th>
+        @Html.DisplayName("Email Address")
+    </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+    </tr>
+    }
+    </tbody>
+    </table>
+</div>
